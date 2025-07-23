@@ -1,0 +1,279 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #50e3c2;
+    --background-color: #f0f4f8;
+    --header-color: #34495e;
+    --text-color: #2c3e50;
+    --border-color: #dce4ec;
+    --hover-bg: #e1f0ff;
+    --danger-color: #e94e77;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+}
+
+h1 {
+    color: var(--header-color);
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+th, td {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: var(--hover-bg);
+}
+
+.actions a {
+    margin-right: 12px;
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.actions a.delete {
+    color: var(--danger-color);
+}
+
+.actions a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+form label {
+    display: block;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="date"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    table, .form-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+
+
+/* 🌙 Dark Mode Styles */
+body.dark-mode {
+    background-color: #1e1e2f;
+    color: #f5f5f5;
+}
+
+body.dark-mode table,
+body.dark-mode .form-container,
+body.dark-mode .footer-section {
+    background-color: #2b2b3c;
+    color: #f5f5f5;
+}
+
+body.dark-mode th {
+    background-color: #3d3d5c;
+    color: #fff;
+}
+
+body.dark-mode td {
+    border-color: #555;
+}
+
+body.dark-mode a {
+    color: #80bfff;
+}
+
+body.dark-mode .footer-content {
+    background-color: rgba(25, 25, 25, 0.8);
+}
+
+
+
+.task-container {
+    width: 90%;
+    margin: 20px auto;
+    background-color: white;
+    border: 2px solid #4a90e2; /* or any border color */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+
+.task-container {
+    height: 400px;            /* Set a specific height */
+    overflow-y: auto;         /* Add scroll if content exceeds height */
+}
+
+
+
+
+/*form*/
+.form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.form-heading {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-size: 1.6em;
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+form input[type="text"],
+form input[type="date"],
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+}
+
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 25px;
+    width: 100%;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--secondary-color);
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
